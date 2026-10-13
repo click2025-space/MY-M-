@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "My M ❤️"
+description = "A personal, cinematic Egyptian-Arabic love story about a driven young man whose life changed after an unexpected meeting, told by a warm third-person narrator before ending in his own letter."
+version = "1.0.0"
+id = "artifacts/my-m-story"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24697
+
+[services.development]
+run = "pnpm --filter @workspace/my-m-story run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/my-m-story", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/my-m-story/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24697"
+BASE_PATH = "/"
