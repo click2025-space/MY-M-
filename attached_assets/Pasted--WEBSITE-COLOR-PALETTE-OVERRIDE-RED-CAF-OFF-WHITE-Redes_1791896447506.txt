@@ -1,0 +1,47 @@
+## WEBSITE COLOR PALETTE OVERRIDE — RED, CAFÉ & OFF-WHITE ❤️🤎🤍
+
+Redesign the entire **MY M ❤️** website using a sophisticated, romantic color palette built around **deep red, warm café brown, and elegant off-white**.
+
+### 1. Core Color Palette
+Use these colors consistently throughout the entire website:
+
+- **Deep Romantic Red — `#8B2635`**: The main romantic accent for important buttons, glowing details, selected states, heart symbols, and meaningful moments.
+- **Rich Burgundy — `#5C1726`**: For deep dramatic backgrounds, cinematic transitions, and emotional sections.
+- **Warm Café Brown — `#6F4E37`**: For elegant panels, story cards, borders, decorative elements, and subtle background gradients.
+- **Light Café — `#A67C63`**: For secondary accents, delicate lines, and warm visual details.
+- **Soft Off-White — `#F8F3EA`**: For main text on dark backgrounds, letter pages, bright sections, and elegant contrast.
+- **Cream White — `#FFFDF8`**: For the final love letter, selected content cards, and moments that should feel intimate and personal.
+- **Muted Rose — `#C9858E`**: Use sparingly for soft romantic highlights and subtle animations.
+
+### 2. Overall Visual Direction
+The website must feel like **an elegant romantic movie, a handwritten love letter, and a beautiful memory combined**.
+
+Use deep burgundy and café brown for cinematic scenes, with warm off-white text and delicate red highlights. In brighter scenes, reverse the balance: use off-white or cream backgrounds with café-brown typography and deep-red accents.
+
+Keep the design mature, emotional, luxurious, and personal. Avoid childish pink designs, excessive hearts, neon colors, overly saturated red, generic Valentine’s Day templates, and excessive gradients.
+
+### 3. Apply the Palette Across Every Scene
+- **Opening scene:** Deep burgundy background, subtle café-brown shadows, off-white mysterious text, and one elegant red accent.
+- **The robot-life scene:** Dark café-brown and burgundy tones, restrained lighting, and minimal red details.
+- **The unexpected meeting:** Warm café gradients with cream text and subtle red highlights.
+- **The transformation scene:** Gradually introduce warmer off-white lighting and richer romantic red as the story becomes more emotional.
+- **Moon and ocean scene:** Preserve the cinematic moonlight and ocean atmosphere, but incorporate deep burgundy reflections, warm brown shadows, and soft cream highlights. Do not turn the ocean into a flat brown or red surface.
+- **Journal and promises:** Use elegant café-brown cards, off-white text, thin burgundy borders, and restrained red details.
+- **Future dreams scene:** Warmer cream lighting, café-brown typography, and subtle romantic red accents.
+- **Final letter:** A beautiful cream-white letter page with dark café-brown text, a deep-red heart, delicate burgundy decorative lines, and the signature **M ❤️**.
+
+### 4. Buttons, Interactions & Animations
+Use deep red for primary buttons with off-white text. On hover or selection, transition gently toward burgundy or warm café brown. Secondary buttons should use transparent or cream backgrounds with café-brown borders.
+
+Keep animations smooth and cinematic: subtle fades, slow color transitions, gentle lighting changes, and elegant text reveals. Use red glow only in a few meaningful moments, never around every element.
+
+### 5. Important Design Rules
+- Maintain excellent readability and strong color contrast.
+- Keep the website fully responsive, especially on mobile.
+- Preserve the Arabic RTL layout and correct handling of English text.
+- Keep the existing narrative, scenes, interactions, buttons, navigation, and functionality unchanged.
+- Do not remove any section or replace the story with a generic romantic template.
+- Update the complete visual system consistently, including backgrounds, typography colors, cards, borders, buttons, hover states, and transitions.
+- Do not introduce new backend services, databases, or unnecessary dependencies.
+
+**Final creative direction:** Imagine deep red roses resting beside a handwritten letter on a warm café-brown wooden desk, illuminated by soft cream-colored moonlight. The result should feel intimate, cinematic, timeless, and unmistakably personal — a visual world created for one special person, not a generic love website.
