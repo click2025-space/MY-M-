@@ -15,12 +15,11 @@ export const SCENES: SceneMeta[] = [
   { id: 'scene-03', number: '03', title: 'إحنا جايين نتكلم في الشغل... أهو 😏', subtitle: 'The Unexpected Meeting', moonPhase: '🌓' },
   { id: 'scene-04', number: '04', title: 'شكله حبها ولا إيه؟ 😂❤️', subtitle: 'A New Horizon', moonPhase: '🌔' },
   { id: 'scene-05', number: '05', title: 'القمر نزل يونس الواد ولا إيه؟ 🌙', subtitle: 'A Whole New World', moonPhase: '🌕' },
-  { id: 'scene-06', number: '06', title: 'طب يا ستي... الخطة مش جواز وخلاص 😂', subtitle: 'The Things He Hopes to Build', moonPhase: '🌖' },
-  { id: 'scene-07', number: '07', title: 'نحلم بإيه يا M؟ اختاري إنتِ بقى 😂✨', subtitle: 'Three Possible Destinations', moonPhase: '🌗' },
-  { id: 'scene-the-way-i-see-you', number: '08', title: 'زي ما أنا شايفك ❤️', subtitle: 'The Way I See You', moonPhase: '💖' },
-  { id: 'scene-08', number: '09', title: 'المرة دي الكلام جد يا ستي ❤️', subtitle: 'The Promise', moonPhase: '🌘' },
-  { id: 'scene-09', number: '10', title: 'الراوي هيسيبكم دقيقتين... عنده إحساس 😂', subtitle: 'The Narrator Steps Aside', moonPhase: '🌙' },
-  { id: 'scene-10', number: '11', title: 'خلاص بقى... محمد عايز يقولك حاجة 🥹❤️', subtitle: 'The Letter from M ❤️', moonPhase: '✨' },
+  { id: 'scene-07', number: '06', title: 'نحلم بإيه يا M؟ اختاري إنتِ بقى 😂✨', subtitle: 'Three Possible Destinations', moonPhase: '🌖' },
+  { id: 'scene-the-way-i-see-you', number: '07', title: 'زي ما أنا شايفك ❤️', subtitle: 'The Way I See You', moonPhase: '💖' },
+  { id: 'scene-08', number: '08', title: 'المرة دي الكلام جد يا ستي ❤️', subtitle: 'The Promise', moonPhase: '🌗' },
+  { id: 'scene-09', number: '09', title: 'الراوي هيسيبكم دقيقتين... عنده إحساس 😂', subtitle: 'The Narrator Steps Aside', moonPhase: '🌙' },
+  { id: 'scene-10', number: '10', title: 'خلاص بقى... محمد عايز يقولك حاجة 🥹❤️', subtitle: 'The Letter from M ❤️', moonPhase: '✨' },
 ];
 
 interface FloatingJourneyHUDProps {

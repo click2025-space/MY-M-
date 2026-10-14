@@ -6,7 +6,6 @@ import { ArabianPalaceSkyline } from '@/components/cinematic/ArabianPalaceSkylin
 import { FloatingJourneyHUD, SCENES } from '@/components/cinematic/FloatingJourneyHUD';
 import { MagicalPortals } from '@/components/cinematic/MagicalPortals';
 import { WaxSealLetter } from '@/components/cinematic/WaxSealLetter';
-import { InteractiveJournal } from '@/components/cinematic/InteractiveJournal';
 import { PreEntryRomanticIntro } from '@/components/cinematic/PreEntryRomanticIntro';
 import { TheWayISeeYou } from '@/components/cinematic/TheWayISeeYou';
 import { BackgroundSoundtrack } from '@/components/cinematic/BackgroundSoundtrack';
@@ -439,43 +438,7 @@ export default function StoryPage() {
       </section>
 
       {/* ========================================================= */}
-      {/* SCENE 06 — THE THINGS HE HOPES TO BUILD                   */}
-      {/* ========================================================= */}
-      <section
-        id="scene-06"
-        className="scene scene-journal relative flex min-h-screen items-center justify-center px-6 py-28"
-      >
-        <div className="story-content relative z-10 max-w-5xl mx-auto w-full">
-          <SceneKicker number="06" titleEn="The Things He Hopes to Build" />
-          <SceneHeading title="طب يا ستي... الخطة مش جواز وخلاص 😂" subtitle="ما يتمنى أن يبنيه معها · خمس أمنيات من القلب" />
-
-          {/* Interactive Journal Component with 5 entries */}
-          <InteractiveJournal />
-
-          {/* Narrator's lines */}
-          <StoryCopy className="mt-10">
-            <div className="reveal rounded-2xl border border-[#B5263D]/40 bg-[#0B2045]/60 p-6 backdrop-blur-md">
-              <p className="arabic text-lg sm:text-xl font-bold text-[#FFF0D6] leading-relaxed">
-                "هو مش شايف إن الحب معناه إن كل حاجة هتبقى سهلة..."
-              </p>
-              <p className="arabic text-base sm:text-lg text-[#F7F1E8]/90 mt-2 leading-relaxed">
-                "هو عارف إن فيه أيام صعبة، واختلافات، وحاجات محتاجة وقت."
-              </p>
-              <p className="arabic text-base sm:text-lg text-[#F7F1E8]/90 mt-2 leading-relaxed">
-                "بس نفسه يبقى فيه مكان لكل واحد فيهم..."
-              </p>
-              <p className="arabic text-xl sm:text-2xl font-bold text-[#E35D73] mt-3 leading-relaxed">
-                "مكان يقدروا فيه يحلموا، ويتعلموا، ويغلطوا، ويحاولوا من جديد."
-              </p>
-            </div>
-          </StoryCopy>
-
-          <SceneNavigationButtons prevIndex={4} nextIndex={6} onGo={navigateTo} />
-        </div>
-      </section>
-
-      {/* ========================================================= */}
-      {/* SCENE 07 — THREE POSSIBLE DESTINATIONS                    */}
+      {/* SCENE 06 — THREE POSSIBLE DESTINATIONS                    */}
       {/* ========================================================= */}
       <section
         id="scene-07"
@@ -484,18 +447,18 @@ export default function StoryPage() {
         <div className="cloud-layer" aria-hidden="true" />
 
         <div className="story-content relative z-10 max-w-5xl mx-auto w-full">
-          <SceneKicker number="07" titleEn="Three Possible Destinations" />
+          <SceneKicker number="06" titleEn="Three Possible Destinations" />
           <SceneHeading title="نحلم بإيه يا M؟ اختاري إنتِ بقى 😂✨" subtitle="ثلاث وجهات ممكنة · اختاري نافذة من النوافذ السحرية" />
 
           {/* Interactive 3 Floating Portals */}
           <MagicalPortals />
 
-          <SceneNavigationButtons prevIndex={5} nextIndex={7} onGo={navigateTo} />
+          <SceneNavigationButtons prevIndex={4} nextIndex={6} onGo={navigateTo} />
         </div>
       </section>
 
       {/* ========================================================= */}
-      {/* SCENE 08 — THE WAY I SEE YOU — زي ما أنا شايفك ❤️         */}
+      {/* SCENE 07 — THE WAY I SEE YOU — زي ما أنا شايفك ❤️         */}
       {/* ========================================================= */}
       <section
         id="scene-the-way-i-see-you"
@@ -504,23 +467,23 @@ export default function StoryPage() {
         <OceanMoonShimmer paused={paused} moonPosition={{ x: 50, y: 16 }} />
 
         <div className="story-content relative z-10 max-w-5xl mx-auto w-full">
-          <SceneKicker number="08" titleEn="The Way I See You" />
+          <SceneKicker number="07" titleEn="The Way I See You" />
           <SceneHeading
             title="THE WAY I SEE YOU — زي ما أنا شايفك ❤️"
             subtitle="لأن حبك مش مجرد حكاية... إنتِ الإنسانة اللي قلبي اختارها"
           />
 
           <TheWayISeeYou
-            onContinueToPromise={() => navigateTo(8)}
+            onContinueToPromise={() => navigateTo(7)}
             paused={paused}
           />
 
-          <SceneNavigationButtons prevIndex={6} nextIndex={8} onGo={navigateTo} />
+          <SceneNavigationButtons prevIndex={5} nextIndex={7} onGo={navigateTo} />
         </div>
       </section>
 
       {/* ========================================================= */}
-      {/* SCENE 09 — THE PROMISE                                    */}
+      {/* SCENE 08 — THE PROMISE                                    */}
       {/* ========================================================= */}
       <section
         id="scene-08"
@@ -529,7 +492,7 @@ export default function StoryPage() {
         <OceanMoonShimmer paused={paused} moonPosition={{ x: 50, y: 18 }} />
 
         <div className="story-content relative z-10 max-w-4xl mx-auto">
-          <SceneKicker number="09" titleEn="The Promise" />
+          <SceneKicker number="08" titleEn="The Promise" />
           <SceneHeading title="المرة دي الكلام جد يا ستي ❤️" subtitle="الوعد الصادق · كلمات خرجت من قلبه دون زيف" />
 
           <StoryCopy className="mb-8">
@@ -577,19 +540,19 @@ export default function StoryPage() {
             </p>
           </StoryCopy>
 
-          <SceneNavigationButtons prevIndex={7} nextIndex={9} onGo={navigateTo} />
+          <SceneNavigationButtons prevIndex={6} nextIndex={8} onGo={navigateTo} />
         </div>
       </section>
 
       {/* ========================================================= */}
-      {/* SCENE 10 & 11 — THE NARRATOR STEPS ASIDE & THE LETTER     */}
+      {/* SCENE 09 & 10 — THE NARRATOR STEPS ASIDE & THE LETTER     */}
       {/* ========================================================= */}
       <section
         id="scene-09"
         className="scene scene-letter relative flex min-h-screen items-center justify-center px-6 py-28 text-center"
       >
         <div className="story-content relative z-10 max-w-4xl mx-auto w-full">
-          <SceneKicker number="10" titleEn="The Narrator Steps Aside" />
+          <SceneKicker number="09" titleEn="The Narrator Steps Aside" />
           <SceneHeading title="الراوي هيسيبكم دقيقتين... عنده إحساس 😂" subtitle="الراوي يترك المساحة · حين تصمت كل الكلمات ليتكلم صاحب الحكاية" />
 
           {/* Narrator's farewell monologue */}
