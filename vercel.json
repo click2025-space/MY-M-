@@ -1,0 +1,5 @@
+{
+  "buildCommand": "pnpm --filter @workspace/my-m-story run build",
+  "outputDirectory": "artifacts/my-m-story/dist/public",
+  "installCommand": "pnpm install"
+}
