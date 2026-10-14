@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Heart } from 'lucide-react';
+import { playSoundtrackNow } from '@/components/cinematic/BackgroundSoundtrack';
 
 interface PreEntryRomanticIntroProps {
   onEnter: () => void;
@@ -16,9 +17,7 @@ export function PreEntryRomanticIntro({ onEnter }: PreEntryRomanticIntroProps) {
   // Advance exactly one step on user click with a subtle, quick crossfade
   const handleAdvance = (next: 2 | 3) => {
     if (isStepChanging || isFadingOut) return;
-    try {
-      window.dispatchEvent(new CustomEvent('play-soundtrack-high-volume'));
-    } catch {}
+    playSoundtrackNow();
     setIsStepChanging(true);
     setTimeout(() => {
       setStep(next);
@@ -29,9 +28,7 @@ export function PreEntryRomanticIntro({ onEnter }: PreEntryRomanticIntroProps) {
   // Final entry button click: fade out smoothly and enter the main journey
   const handleFinalEntry = () => {
     if (isFadingOut) return;
-    try {
-      window.dispatchEvent(new CustomEvent('play-soundtrack-high-volume'));
-    } catch {}
+    playSoundtrackNow();
     setIsFadingOut(true);
     setTimeout(() => {
       onEnter();
@@ -183,6 +180,7 @@ export function PreEntryRomanticIntro({ onEnter }: PreEntryRomanticIntroProps) {
               <button
                 type="button"
                 onClick={() => handleAdvance(2)}
+                onTouchStart={() => playSoundtrackNow()}
                 aria-label="كمّلي معايا"
                 className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#B5263D] hover:bg-[#681A32] border border-[#FFF0D6]/40 hover:border-[#FFF0D6] px-8 sm:px-10 py-3.5 sm:py-4 text-lg sm:text-xl font-bold text-[#FFF0D6] shadow-[0_4px_25px_rgba(181,38,61,0.45)] transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#A9C8F0] cursor-pointer"
               >
@@ -202,6 +200,7 @@ export function PreEntryRomanticIntro({ onEnter }: PreEntryRomanticIntroProps) {
               <button
                 type="button"
                 onClick={() => handleAdvance(3)}
+                onTouchStart={() => playSoundtrackNow()}
                 aria-label="قولي يا سيدي"
                 className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#B5263D] hover:bg-[#681A32] border border-[#FFF0D6]/40 hover:border-[#FFF0D6] px-8 sm:px-10 py-3.5 sm:py-4 text-lg sm:text-xl font-bold text-[#FFF0D6] shadow-[0_4px_25px_rgba(181,38,61,0.45)] transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#A9C8F0] cursor-pointer"
               >
@@ -226,6 +225,7 @@ export function PreEntryRomanticIntro({ onEnter }: PreEntryRomanticIntroProps) {
                 id="intro-entry-btn"
                 type="button"
                 onClick={handleFinalEntry}
+                onTouchStart={() => playSoundtrackNow()}
                 disabled={isFadingOut}
                 aria-label="طب يلا بينا يا محمد - الدخول إلى رحلة M"
                 className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#B5263D] hover:bg-[#681A32] border border-[#FFF0D6]/40 hover:border-[#FFF0D6] px-8 sm:px-10 py-3.5 sm:py-4 text-lg sm:text-xl font-bold text-[#FFF0D6] shadow-[0_4px_25px_rgba(181,38,61,0.45)] transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#A9C8F0] cursor-pointer"
@@ -240,19 +240,17 @@ export function PreEntryRomanticIntro({ onEnter }: PreEntryRomanticIntroProps) {
 
       {/* Mohamed's Kind Soundtrack Dedication */}
       <div className="relative z-20 px-4 text-center max-w-xl mx-auto my-2 animate-in fade-in duration-700">
-        <div
-          onClick={() => {
-            try {
-              window.dispatchEvent(new CustomEvent('play-soundtrack-high-volume'));
-            } catch {}
-          }}
-          className="inline-flex items-center gap-2.5 rounded-full border border-[#E35D73]/35 bg-[#0B2045]/85 px-4 sm:px-6 py-2 backdrop-blur-md text-[#FFF0D6] shadow-[0_4px_25px_rgba(7,21,47,0.7),0_0_15px_rgba(181,38,61,0.2)] cursor-pointer hover:border-[#E35D73]/70 hover:scale-[1.02] transition-all"
+        <button
+          type="button"
+          onClick={() => playSoundtrackNow()}
+          onTouchStart={() => playSoundtrackNow()}
+          className="inline-flex items-center gap-2.5 rounded-full border border-[#E35D73]/40 bg-[#0B2045]/85 px-4 sm:px-6 py-2 backdrop-blur-md text-[#FFF0D6] shadow-[0_4px_25px_rgba(7,21,47,0.7),0_0_15px_rgba(181,38,61,0.2)] cursor-pointer hover:border-[#E35D73]/70 hover:scale-[1.02] active:scale-95 transition-all"
         >
-          <span className="text-sm sm:text-base text-[#E35D73]" aria-hidden="true">🎵</span>
+          <span className="text-sm sm:text-base text-[#E35D73] animate-pulse" aria-hidden="true">🎵</span>
           <p className="arabic text-xs sm:text-sm font-medium text-[#FFF0D6] leading-relaxed">
             المزيكا دي معمولة مخصوص ليكي... محمد هو اللي عملها وركّبها عشانك بكل حب، علّي الصوت وعيشي الحكاية 🥹❤️
           </p>
-        </div>
+        </button>
       </div>
 
       {/* Bottom spacer for balance */}
